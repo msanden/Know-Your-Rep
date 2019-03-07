@@ -1,0 +1,46 @@
+.button-align {
+  padding-left: 83%;
+  padding-top: 1%;
+}
+
+.plain-text {
+  padding: 2%;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: #484549;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-right: 0;
+  margin-left: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.left {
+  background: #31A1EC;
+  opacity: .9;
+}
+
+.right {
+  background: #898673;
+  opacity: .9;
+}
+
+.text {
+  position: relative;
+  text-align: center;
+  padding: 30px;
+  font-family: fantasy;
+}
