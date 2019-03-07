@@ -2,116 +2,227 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1, shrink-to-fit=no">
+
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/jquery-3.3.1.js" ></script>
-    <script src="js/scripts.js" ></script>
-    <title>Know Your Representative</title>
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <title>Know your Representative</title>
   </head>
+
   <body>
-    a static? navigation bar with an
-    about us - shows a statement that describes website
-    contact - with questions about the website
-    sign up & login //see github landing page for inspiration --black & white backgrounds??
-    a search bar??
 
-    // if we have a second html page//
-    side panel holds community board?? and links like [plan town event]
-    [Appeal for an issue] [Poll] [submit ticket]
+    <h1>Know your Representative</h1>
+    <div class="container">
 
-  <h2>Lamu County</h2>
-  //using hide/show classes to switch between unit and name?
 
-  Governor Fahim Twaha
-  Deputy Governor - ?
-  2 sub-counties: Lamu East & Lamu west
-  Lamu East, 6 wards
-  Basuba - Rep. Barisa Deko Bana
-  Faza/Tchundwa - Rep. Fahd Dini Adnan
-  Kiunga - Rep. Sheikh Abdalla Aboud
-  Kizingitini west - ?
-  Ndau - ?
-  Siyu/Pate - ?
+      <!-- <div class="row"> -->
+        <div class="col-md-6">
 
-  <h1>Talk to the web page</h1>
-  // A form? that displays what you type in
 
-  <h2>Services you can claim</h2>
-  //the whole list, right hand side panel?
+                <div class="panel" id="first-poll">
+                  <div class="left" onclick="addleft()">
+                    <div class="text">
+                      <p> ✔︎ street lamps <span class="option-size" id="num-yes"></span></p>
+                      <br>
+                      <span class="option-title" id="option-one"></span>
+                    </div>
+                  </div>
 
-  1. Agriculture, including—
+                  <div class="right" onclick="addright()">
+                    <div class="text">
+                      <p>✘<br> <span class="option-size" id="num-no"></span></p>
+                      <br>
+                      <!-- <span class="option-title" id="option-two"></span> -->
+                    </div>
+                  </div>
+                </div>
 
-(a) crop and animal husbandry;
-(b) livestock sale yards;
-(c) county abattoirs;
-(d) plant and animal disease control; and
-(e) fisheries.
+                <div class="panel">
+                <div id="live-count">
+                  <p><span id="total-vote"></span></p>
+                  <p><span id="total-yes"></span></p>
+                  <p><span id="total-no"></span></p>
+                </div>
+                </div>
 
-2. County health services, including, in particular—
 
-(a) county health facilities and pharmacies;
-(b) ambulance services;
-(c) promotion of primary health care;
-(d) licensing and control of undertakings that sell food to the public;
-(e) veterinary services (excluding regulation of the profession);
-(f) cemeteries, funeral parlours and crematoria; and
-(g) refuse removal, refuse dumps and solid waste disposal.
+            <!-- </div>   end col-md-6 -->
+          <!-- </div> end row first poll -->
 
-3. Control of air pollution, noise pollution, other public nuisances and outdoor advertising.
-4. Cultural activities, public entertainment and public amenities,including--
+          <!-- <div class="row"> -->
+            <!-- <div class="col-md-6"> -->
 
-(a) betting, casinos and other forms of gambling;
-(b) racing;
-(c) liquor licensing;
-(d) cinemas;
-(e) video shows and hiring;
-(f) libraries;
-(g) museums;
-(h) sports and cultural activities and facilities; and
-(i) county parks, beaches and recreation facilities.
+              <div class="panel" id="second-poll">
+                <div class="left" onclick="addleft2()">
+                  <div class="text">
+                    <p>boda-boda shed<span class="option-size" id="num-yes-2"></span></p>
+                    <br>
+                  </div>
+                </div>
+                <div class="right" onclick="addright2()">
+                  <div class="text">
+                    <p>✘<span class="option-size" id="num-no-2"></span></p>
+                    <br>
+                  </div>
+                </div>
+              </div>
 
-5. County transport, including--
+            <div class="panel">
+              <div class="col-md-6">
+                <div id="live-count">
+                  <p><span id="total-vote-2"></span></p>
+                  <p><span id="total-yes-2"></span></p>
+                  <p><span id="total-no-2"></span></p>
+                </div>
+              </div>
+            </div>
 
-(a) county roads;
-(b) street lighting;
-(c) traffic and parking;
-(d) public road transport; and
-(e) ferries and harbours, excluding the regulation of international and national shipping and matters related thereto.
+             </div> <!--end col-md-6  second poll -->
+          <!-- </div> end row 2 -->
 
-6. Animal control and welfare, including--
+        <div class="col-md-6">
+          <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="text-center">
+                  <strong>Join the Discussion</strong>
+                  </div>
+                  <div class="text-center">
+                    Tell us what's going on in your area.
+                    </div>
 
-(a) licensing of dogs; and
-(b) facilities for the accommodation, care and burial of animals.
 
-7. Trade development and regulation, including--
+                    <div class="modal" id="create-post">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
 
-(a) markets;
-(b) trade licences (excluding regulation of professions);
-(c) fair trading practices;
-(d) local tourism; and
-(e) cooperative societies.
+                            <div class="modal-body">
+                              <p>Join the conversation.By having an account, you
+                                 can subscribe, vote, and comment on all your
+                                 favorite content.Sign up in just seconds.
+                                </p> </div>
 
-8. County planning and development, including—
+                        </div> <!--end modal content -->
+                      </div> <!--end modal dialog -->
+                    </div> <!--end modal -->
 
-(a) statistics;
-(b) land survey and mapping;
-(c) boundaries and fencing;
-(d) housing; and
-(e) electricity and gas reticulation and energy regulation.
 
-9. Pre-primary education, village polytechnics, homecraft centres and childcare facilities.
-10. Implementation of specific national government policies on natural resources and environmental conservation, including--
 
-(a) soil and water conservation; and
-(b) forestry.
 
-11. County public works and services, including--
+                  <div class="text-center">
+                    <button onclick="signUp()" class="btn btn-primary btn-block"
+                     id="create-post">Create Post</button>
+                  </div>
+              </div>
+            </div>
 
-(a) storm water management systems in built-up areas; and
-(b) water and sanitation services.
+          <form id="post-items">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="form-group">
+                  <label for="your-thought">What's on your mind?</label>
+                  <input type="text" class="form-control" id="input-post">
+                </div>
+              </div>
+              <div class="panel-footer">
 
-12. Fire fighting services and disaster management.
-13. Control of drugs and pornography.
-14. Ensuring and coordinating the participation of communities and locations in governance at the local level and assisting communities and locations to develop the administrative capacity for the effective exercise of the functions and powers and participation in governance at the local level.
+                <div class="button-align">
+                 <button type="submit" class="btn btn-primary"
+                  id="post-submit">Post</button>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <div id="posts">
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="text-center">
+                  <strong>TOP COMMUNITIES</strong>
+              </div>
+              <div class="row">
+
+
+              <div class="col-xs-6">
+              <ul>
+                <li><a href="#">/Nurses</a></li>
+                <li><a href="#">/Teachers</a></li>
+                <li><a href="#">/Matatus</a></li>
+                <li><a href="#">/Patwe #45</a></li>
+                <li><a href="#">/Taxi</a></li>
+                <li><a href="#">/Boda-Boda</a></li>
+                <li><a href="#">/Mechanics</a></li>
+                <li><a href="#">/Soko</a></li>
+
+              </ul>
+              </div>
+
+              <div class="col-xs-6">
+              <ul>
+                <li><button class="btn btn-primary btn-xs">SUBSCRIBE</button></li>
+                <li><button class="btn btn-primary btn-xs">SUBSCRIBE</button></li>
+                <li><button class="btn btn-primary btn-xs">SUBSCRIBE</button></li>
+                <li><button class="btn btn-primary btn-xs">SUBSCRIBE</button></li>
+                <li><button class="btn btn-primary btn-xs">SUBSCRIBE</button></li>
+                <li><button class="btn btn-primary btn-xs">SUBSCRIBE</button></li>
+                <li><button class="btn btn-primary btn-xs">SUBSCRIBE</button></li>
+
+
+              </ul>
+              </div>
+            </div>
+
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="row">
+
+                <div class="col-xs-6">
+                  <div class="title">
+                    <ul>
+                      <a href="#">About<a> <br>
+                      <a href="#">Careers</a> <br>
+                      <a href="#">Press</a>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-xs-6">
+                  <div class="title">
+                    <ul>
+                      <a href="#">Advertise</a> <br>
+                      <a href="#">Blog</a><br>
+                      <a href="#">Help</a>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="panel-footer">Content Policy | Privacy Policy |
+               User Agreement | <div class="text-center">Know your Representative © 2019</div>
+             </div>
+          </div>
+
+        </div>
+
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+
   </body>
+
 </html>
