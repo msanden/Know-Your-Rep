@@ -4,9 +4,9 @@ function resetField(){
 }
 
 function signUp() {
-  confirm("Join the conversation.By having an account, you" +
-     "can subscribe, vote, and comment on all your" +
-     "favorite content. Sign up in just seconds.");
+  confirm("Join the conversation. By having an account, you" +
+     " can subscribe, vote, and comment on all your" +
+     " favorite content. Sign up in just seconds.");
 }
 
 $(document).ready(function(){
@@ -33,6 +33,61 @@ $(document).ready(function(){
   $('body').on('click','#delete-post', function(){
       $(this).parent('.add-post').remove();
     });
+
+    $('.clickable1').click(function() {
+    $('#governor-hidden').toggle();
+    $('#governor-showing').toggle();
+  });
+
+  $('.clickable2').click(function() {
+  $('#depGov-hidden').toggle();
+  $('#depGov-showing').toggle();
+});
+
+$('.clickable3').click(function() {
+$('#senator-hidden').toggle();
+$('#senator-showing').toggle();
+});
+
+$('.clickable4').click(function() {
+$('#mp1-hidden').toggle();
+$('#mp1-showing').toggle();
+});
+
+$('.clickable5').click(function() {
+$('#mp2-hidden').toggle();
+$('#mp2-showing').toggle();
+});
+
+$('.clickable6').click(function() {
+$('#womanRep-hidden').toggle();
+$('#womanRep-showing').toggle();
+});
+
+$('.clickable7').click(function() {
+$('#mca1-hidden').toggle();
+$('#mca1-showing').toggle();
+});
+$('.clickable8').click(function() {
+$('#mca2-hidden').toggle();
+$('#mca2-showing').toggle();
+});
+$('.clickable9').click(function() {
+$('#mca3-hidden').toggle();
+$('#mca3-showing').toggle();
+});
+$('.clickable10').click(function() {
+$('#mca4-hidden').toggle();
+$('#mca4-showing').toggle();
+});
+$('.clickable11').click(function() {
+$('#mca5-hidden').toggle();
+$('#mca5-showing').toggle();
+});
+$('.clickable12').click(function() {
+$('#mca6-hidden').toggle();
+$('#mca6-showing').toggle();
+});
 
 });
 

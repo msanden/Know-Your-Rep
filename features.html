@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>features</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/features.css" rel="stylesheet">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div class="container"> <!-- Begin page content -->
+      <h2>Make an Impact </h2>
+      <ul class="nav nav-tabs navbar-right">
+        <li role="presentation"><a href="index.html">Home</a></li>
+        <li role="presentation" class="active"><a href="features.html">Get Involved</a></li>
+        <li role="presentation"><a href="county.html">Your County</a></li>
+        <li role="presentation"><a href="aboutUs.html">About Us</a></li>      
+      </ul>
+      <p class="lead">Join a group. Give your opinion in a poll. Engage.</p>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="text-center">
+                <strong>Join the Discussion</strong>
+              </div>
+              <div class="text-center">
+                Tell us what's going on in your area.
+              </div>
+              <div class="text-center">
+                <button onclick="signUp()" class="btn btn-primary btn-block" id="create-post">Create Post</button>
+              </div>
+            </div>
+          </div>
+          <form id="post-items">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="form-group">
+                  <label for="your-thought">What's happening in your area?</label>
+                  <input type="text" class="form-control" id="input-post">
+                </div>
+              </div>
+              <div class="panel-footer">
+                <div class="button-align">
+                  <button type="submit" class="btn btn-primary" id="post-submit">Post</button>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <div id="posts">
+
+          </div>
+        </div> <!--end row-->
+
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-header">
+              <div class="text-center">
+                <strong>TOP COMMUNITIES</strong>
+              </div>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-xs-6">
+                  <ul>
+                    <li><a href="#">/Nurses</a></li>
+                    <br>
+                    <li><a href="#">/Teachers</a></li>
+                    <br>
+                    <li><a href="#">/Matatus</a></li>
+                    <br>
+                    <li><a href="#">/Patwe #45</a></li>
+                    <br>
+                    <li><a href="#">/Taxi</a></li>
+                    <br>
+                    <li><a href="#">/Boda-Boda</a></li>
+                    <br>
+                    <li><a href="#">/Mechanics</a></li>
+                    <br>
+                    <li><a href="#">/Soko</a></li>
+                  </ul>
+                </div>
+
+                <div class="col-xs-6">
+                  <ul>
+                    <li><button class="btn btn-primary btn-xs">Subscribe</button></li>
+                    <br>
+                    <li><button class="btn btn-primary btn-xs">Subscribe</button></li>
+                    <br>
+                    <li><button class="btn btn-primary btn-xs">Subscribe</button></li>
+                    <br>
+                    <li><button class="btn btn-primary btn-xs">Subscribe</button></li>
+                    <br>
+                    <li><button class="btn btn-primary btn-xs">Subscribe</button></li>
+                    <br>
+                    <li><button class="btn btn-primary btn-xs">Subscribe</button></li>
+                    <br>
+                    <li><button class="btn btn-primary btn-xs">Subscribe</button></li>
+                    <br>
+                    <li><button class="btn btn-primary btn-xs">Subscribe</button></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!--end column-->
+
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="text-center">
+              <div class="panel-heading"><strong>Know your Representative</strong></div>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-xs-6">
+                  <div class="title">
+                    <ul>
+                      <a href="#">About<a> <br>
+                          <a href="#">Careers</a> <br>
+                          <a href="#">Press</a>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xs-6">
+                  <div class="title">
+                    <ul>
+                      <a href="#">Advertise</a> <br>
+                      <a href="#">Blog</a><br>
+                      <a href="#">Help</a>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel-footer">Content Policy | Privacy Policy |
+              User Agreement | <div class="text-center">Know your Representative © 2019</div>
+            </div>
+          </div>
+        </div>
+      </div> <!--end row-->
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">Vote to appeal for a boda-boda shed in your area</div>
+
+            <div class="grid" id="second-poll">
+              <div class="left" onclick="addleft2()">
+                <div class="text">
+                  <p>boda-boda shed <span class="option-size" id="num-yes-2"></span></p>
+                  <br>
+                </div>
+              </div>
+              <div class="right" onclick="addright2()">
+                <div class="text">
+                  <p>✘ No <span class="option-size" id="num-no-2"></span></p>
+                  <br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              Vote to appeal for more street lamps in your area.
+            </div>
+            <div class="grid" id="first-poll">
+              <div class="left" onclick="addleft()">
+                <div class="text">
+                  <p> ✔︎ street lamps <span class="option-size" id="num-yes"></span></p>
+                  <br>
+                  <span class="option-title" id="option-one"></span>
+                </div>
+              </div>
+              <div class="right" onclick="addright()">
+                <div class="text">
+                  <p>✘ No <br> <span class="option-size" id="num-no"></span></p>
+                  <br>
+                  <!-- <span class="option-title" id="option-two"></span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="text-center">
+              <div class="panel-heading"><strong>Mandated County-Level Services</strong></div>
+            </div>
+            <div class="panel-body">
+                <div class="col-md-6">
+                  <a href="#"><p>Agriculture</p></a>
+                  <a href="#"><p>Health</p></a>
+                  <a href="#"><p>Public Nuisances</p></a>
+                  <a href="#"><p>Culture</p></a>
+                  <a href="#"><p>Transport</p></a>
+                  <a href="#"><p>County planning</p></a>
+                </div>
+                <div class="col-md-6">
+                  <a href="#"><p>Animal control</p></a>
+                  <a href="#"><p>Trade development</p></a>
+                  <a href="#"><p>Education</p></a>
+                  <a href="#"><p>Environmental Conservation</p></a>
+                  <a href="#"><p>Public Works & Services</p></a>
+                  <a href="#"><p>Disaster Management</p></a>
+                </div>
+            </div>
+         </div>
+        </div>
+
+      </div> <!--end row-->
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">#Know Your Representative © 2019.</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

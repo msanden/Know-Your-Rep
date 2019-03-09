@@ -15,15 +15,10 @@ a {
   color: #484549;
 }
 
-html, body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
+
 
 .container {
-  margin-right: 0;
-  margin-left: 0;
+  margin: 10px;
   width: 100%;
   max-width: 100%;
 }
@@ -43,4 +38,47 @@ html, body {
   text-align: center;
   padding: 30px;
   font-family: fantasy;
+}
+
+/*top page styling*/
+.sidebar {
+
+  display: inline-block;
+  min-height: 100%;
+  position: relative;
+}
+
+.clickable {
+  color: #0088cc;
+  cursor: pointer;
+}
+
+.clickable:hover {
+  text-decoration: underline;
+}
+
+#governor-hidden, #depGov-hidden, #senator-hidden, #mp1-hidden, #mp2-hidden,
+#womanRep-hidden, #mca1-hidden, #mca2-hidden, #mca3-hidden, #mca4-hidden,
+#mca5-hidden, #mca6-hidden{
+  display: none;
+}
+
+
+/*bottom page styling*/
+.grid {
+  grid-template-columns: 50% 50%;
+  display: grid;
+  overflow: hidden;
+  height: 120px;
+  width: 300px;
+  position: fixed;
+  border-radius: 10px;
+}
+
+.pad {
+  padding: 35%;
+}
+
+.jumbotron {
+  background-color: #32A0CE;
 }
